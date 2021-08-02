@@ -112,7 +112,7 @@ bigagn128config = {'dataset': 'I128_hdf5',
  'device': 'cpu'}
 
 def setup_model(name,dataset_size,resume=None,biggan_imagenet_pretrained_model_path="./data/G_ema.pth"):
-    print("model name:",name)
+    # print("model name:",name)
     if name=="biggan128-ada":
         G = biggan.Generator(**bigagn128config)
         G.load_state_dict(torch.load(biggan_imagenet_pretrained_model_path,map_location=lambda storage, loc: storage))
