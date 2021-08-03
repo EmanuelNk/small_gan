@@ -11,8 +11,8 @@ def setup_dataloader(name,h=128,w=128,batch_size=4,num_workers=4):
     '''
     if name == "monet":
         img_path_list = glob.glob("./data/monet/*.png")
-    elif name=="anime":
-        img_path_list = glob.glob("./data/anime/*.png")
+    elif name=="test":
+        img_path_list = glob.glob("./temp_test_set/tmp/*.jpg")
     else:
         raise NotImplementedError("Unknown dataset %s"%name)
         
